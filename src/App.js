@@ -1,11 +1,15 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 import Tasks from "./components/Tasks";
-import "./App.css"
+import AddTask from "./components/AddTask"; 
+
+
+import "./App.css";
+
 
 const App = ( ) => {
   
-  const [tasks, setTasks] = useState([
+  const [tasks] = useState([
     {
       id: "1",
       title: "Estudar Programação",
@@ -18,13 +22,12 @@ const App = ( ) => {
     }
   ]);
 
-  setTasks([]); 
-
   return (
     <>
       <div className="container">
-        <Tasks tasks={tasks}/>
-      </div>;
+        <AddTask/>
+        <Tasks tasks={tasks} />
+      </div>
     </> 
   ); 
 };
